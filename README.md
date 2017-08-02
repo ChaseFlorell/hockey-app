@@ -1,8 +1,8 @@
-#Hockey-App (unofficial) Windows Client
+# Hockey-App (unofficial) Windows Client
 
 The Hockey-App (unofficial) Windows Client is a tool  meant to help mobile developers on the Windows platform better manage their apps in their CI/Automation pipeline.
 
-##Features
+## Features
 
  - [Upload] a new version of your app to your HockeyApp account.
 
@@ -10,7 +10,7 @@ The Hockey-App (unofficial) Windows Client is a tool  meant to help mobile devel
 
  > .\hockey-app.exe upload -token "some-token" -appId "some-app-id" -ipa "c:\path\to\your-app.ipa"
 
- ##Help
+ ## Help
 
  If you  need to find all of the available command offered, simply run
 
@@ -20,6 +20,6 @@ The Hockey-App (unofficial) Windows Client is a tool  meant to help mobile devel
 
  > .\hockey-app.exe [module] /?
 
- ##License
+ ## License
 
 Licensed MIT, please review the [license](https://github.com/ChaseFlorell/hockey-app/blob/develop/LICENSE.md) file.
