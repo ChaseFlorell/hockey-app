@@ -6,7 +6,7 @@ The Hockey-App (unofficial) Windows Client is a tool  meant to help mobile devel
 
  - [Upload] a new version of your app to your HockeyApp account.
 
- ##Example
+ ## Example
 
  > .\hockey-app.exe upload -token "some-token" -appId "some-app-id" -ipa "c:\path\to\your-app.ipa"
 
