@@ -9,6 +9,8 @@ namespace HockeyApp.Modules
 {
     public class HelpModule : Module
     {
+        private bool _invalidCommand;
+
         public HelpModule() : base(Resx.Help_ModuleKeyword, Resx.Help_ModuleDescription)
         {
         }
@@ -17,8 +19,8 @@ namespace HockeyApp.Modules
         {
             var canHandle = base.CanHandle(command, args);
             var noArgs = !args.Any();
-            var invalidCommand = !Commands.ContainsKey(command);
-            return canHandle || noArgs || invalidCommand;
+            _invalidCommand = !Commands.ContainsKey(command);
+            return canHandle || noArgs || _invalidCommand;
         }
 
         public override Task<IResponseObject> Handle()
@@ -33,6 +35,10 @@ namespace HockeyApp.Modules
                 builder.AddRow(command.Key, command.Value);
 
             builder.WriteToConsole(Console.Out);
+
+            if (_invalidCommand)
+                Environment.Exit(ExitCodes.InvalidCommand);
+            
             return Task.FromResult(default(IResponseObject));
         }
     }

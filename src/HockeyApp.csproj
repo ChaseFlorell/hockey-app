@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChainBuilder.cs" />
+    <Compile Include="ExitCodes.cs" />
     <Compile Include="Models\IResponseObject.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

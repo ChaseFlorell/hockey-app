@@ -68,6 +68,7 @@ namespace HockeyApp.Modules
                 Console.ForegroundColor = defaColor;
                 Console.WriteLine(Resx.Help_Title);
                 Console.WriteLine(Resx.Help_ModuleHelp, Program.ExecutableName, key);
+                Environment.Exit(ExitCodes.CommandFailed);
             }
         }
 
