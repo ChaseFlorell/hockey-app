@@ -38,7 +38,7 @@ namespace HockeyApp.Http
                 customValidation: () =>
                 {
                     // ReSharper disable once NotResolvedInText
-                    if (appId == null) throw new ArgumentNullException("-appId");
+                    if (appId == null) throw new ArgumentNullException($"-{nameof(appId)}");
                     // ReSharper disable once NotResolvedInText
                     if (!parameters.ContainsKey("ipa")) throw new ArgumentNullException("-ipa");
                 });
@@ -100,7 +100,7 @@ namespace HockeyApp.Http
 
         private void Validate(string token, Dictionary<string, string> parameters, Action customValidation = null)
         {
-            if (token == null) throw new ArgumentNullException(nameof(token));
+            if (token == null) throw new ArgumentNullException($"-{nameof(token)}");
             if (parameters == null) throw new ArgumentNullException(nameof(parameters));
 
             customValidation?.Invoke();

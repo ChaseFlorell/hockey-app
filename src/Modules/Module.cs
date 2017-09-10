@@ -62,13 +62,14 @@ namespace HockeyApp.Modules
             }
             catch (Exception ex)
             {
-                var defaColor = Console.ForegroundColor;
+                var defaultColor = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine(ex.Message);
-                Console.ForegroundColor = defaColor;
+                Console.ForegroundColor = defaultColor;
                 Console.WriteLine(Resx.Help_Title);
                 Console.WriteLine(Resx.Help_ModuleHelp, Program.ExecutableName, key);
-                Environment.Exit(ExitCodes.CommandFailed);
+                Console.WriteLine();
+                Environment.ExitCode = ExitCodes.CommandFailed;
             }
         }
 
